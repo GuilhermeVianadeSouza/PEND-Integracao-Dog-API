@@ -5,9 +5,29 @@
 }
 
 body {
-    background-color: aquamarine;
+    display: grid;
+    grid-template-rows: auto;
+}
+
+header {
+    height: 50px;
+    max-width: auto;
+}
+
+.campo {
+    background-color: black;
+    color: #ffff;
+    border-color: #ffff;
+    font-size: 20px;
+    justify-content: center;
 }
 
 .botao {
+ border-radius: 30%
+}
 
+.imagens img {
+    padding: 5px;
+    height: 12rem;
+    width: 12rem;
 }

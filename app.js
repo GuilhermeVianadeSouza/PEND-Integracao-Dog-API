@@ -12,7 +12,7 @@ async function buscarImagens(){
     const nomeEscrito = document.getElementById('nome')
     const racaEscrita = nomeEscrito.value
 
-    //Constante na qual pegan
+    //Constante na qual pega
     const url = `https://dog.ceo/api/breed/${racaEscrita}/images`
     const response = await fetch (url) //pedido de requisição das informações
     const imagens = await response.json() //transformando a resquisição pega em arquivo json 
@@ -24,18 +24,19 @@ async function buscarImagens(){
 async function mostrarImagens() {
     //Essa constante espera que a função buscarImagens retorne imagens.message para continuar a ação
     const urls = await buscarImagens(imagens.message);
-    galeria.textContent = '';
+    
+    galeria.textContent = ''; //limpa todos os textos que estão na tela, isso inclui as url das imagens para que elas não apareçam na tela.
 
     //Criando uma constante que vai receber um .map que vai buscar as url através de uma arrow fuction;
     const elementos = urls.map(url => {
-        const img = document.createElement('img'); //Em seguida é declarado a criação do elemento img que vai receber o src e alt da imagem e return img.
+        const img = document.createElement('img'); //Em seguida é declarado a criação do elemento img que vai receber o src e alt da imagem e returnar img.
         img.src = url;
         img.alt = 'Imagem da raça';
         return img;
       });
 
       //
-      elementos.forEach(img => galeria.appendChild(img));
+      elementos.forEach(img => galeria.appendChild(img)); //Por fim, procurando através de um forEach 
     }
 
 botaoPesquisarRaca.addEventListener('click', mostrarImagens)
