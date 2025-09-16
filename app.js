@@ -12,11 +12,10 @@ async function buscarImagens(){
     const nomeEscrito = document.getElementById('nome')
     const racaEscrita = nomeEscrito.value
 
-    //Constante na qual pega
+    //Constante na qual pega as imagens
     const url = `https://dog.ceo/api/breed/${racaEscrita}/images`
     const response = await fetch (url) //pedido de requisição das informações
     const imagens = await response.json() //transformando a resquisição pega em arquivo json 
-    console.log(imagens.message)
     return imagens.message 
 }
 

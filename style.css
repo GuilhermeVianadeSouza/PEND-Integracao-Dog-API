@@ -6,12 +6,23 @@
 
 body {
     display: grid;
+    justify-items: center;
     grid-template-rows: auto;
+    background-color: rgba(52, 253, 34, 0.733);
+    padding-top: 5px;
+}
+
+.principal {
+    background-color: rgba(177, 177, 177, 0.37);
+    border-radius: 5%;
+    padding: 12px;
+    font-size: 32px;
 }
 
 header {
-    height: 50px;
-    max-width: auto;
+    display: flex;
+    gap: 10px;
+    margin: 20px;
 }
 
 .campo {
@@ -19,15 +30,22 @@ header {
     color: #ffff;
     border-color: #ffff;
     font-size: 20px;
-    justify-content: center;
 }
 
 .botao {
- border-radius: 30%
+    border-radius: 10%;
+    width: 70px;
+    background-color: #464646ef;
 }
 
 .imagens img {
     padding: 5px;
+    background-color: black;
     height: 12rem;
-    width: 12rem;
+    width: 14rem;
+    box-shadow: 16px 16px 16px rgba(26, 37, 71, 0.404);
+}
+
+.imagens {
+    padding: 24px;
 }
